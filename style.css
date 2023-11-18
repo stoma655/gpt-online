@@ -32,7 +32,7 @@ header .wrapper {
 }
 
 header nav {
-    margin-left: 60px;
+    margin-left: 120px;
     transition: .2s
 }
 
@@ -43,8 +43,8 @@ header nav ul {
 }
 
 header nav ul li {
-    
-    font-size: 14px;
+    margin-right: 66px;
+    font-size: 16px;
     font-weight: 100;
 }
 
@@ -80,7 +80,7 @@ header .wrapper .logo span {
     font-size: 22px;
     line-height: 15px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 /* ACCORDION  */
@@ -117,7 +117,7 @@ section.accord .wrapper {
 }
 
 .accordion-title {
-    padding: 0.5em 3em 0.5em 1em;
+    padding: 0.9em 3em 0.9em 1em;
     position: relative;
     display: block;
     cursor: pointer;
@@ -130,6 +130,7 @@ section.accord .wrapper {
 
 .accordion-title .fas {
     font-size: 16px;
+    margin-right: 6px;
 }
 
 
@@ -149,6 +150,8 @@ section.accord .wrapper {
 
 .accordion-content p {
     padding: 0 20px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 
@@ -177,6 +180,7 @@ section.news-section .wrapper {
     margin-bottom: 1em;
     font-size: 42px;
     color: white;
+    margin-left: 22px;
 }
 
 .news-item {
@@ -261,7 +265,7 @@ section.features {
     width: 100%;
     background-color: #343541;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 110px 0;
+    padding: 150px 0;
 }
 
 section.features .wrapper {
@@ -282,6 +286,8 @@ section.features .block {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+
+
 section.features .block .title {
     display: flex;
     align-items: center;
@@ -291,7 +297,7 @@ section.features .block .title {
 section.features .block i {
     display: block;
     font-size: 2em;
-    color: #dddddd;
+    color: #6C60A0;
     margin-bottom: 1em;
 }
 
@@ -401,7 +407,7 @@ section.why-me .column ul li .fa-times {
 }
 
 section.why-me .column ul li .fa-check {
-    color: #10A37F
+    color: #6C60A0
 }
 
 section.why-me .column h2 {
@@ -424,15 +430,17 @@ section.why-me .arrow {
 section.welcome {
     
     width: 100%;
-    height: 800px;
+    height: 900px;
     background-image: radial-gradient(circle at top right, rgba(52, 53, 65, 0.13), transparent), radial-gradient(circle at 20% 80%, rgba(32, 33, 35, 0.13), transparent);
     position: relative;
     padding-top: 120px;
 }
 
 section.welcome .wrapper {
+    position: relative;
     max-width: 1200px;
     margin: auto;
+    z-index: 2;
     /* border: 1px solid red; */
 }
 
@@ -442,6 +450,7 @@ section.welcome .wrapper h1 {
     /* text-transform: uppercase; */
     font-weight: 500;
     line-height: 42px;
+    margin-top: 120px;
 }
 
 section.welcome .wrapper p {
@@ -683,7 +692,7 @@ p.time {
 
 .text_tables .left p strong {
     font-weight: 800;
-    color: #969696;
+    color: #6C60A0;
     font-size: 22px;
 }
 
@@ -709,7 +718,7 @@ p.time {
 
 .text_tables .left ul li strong {
     font-weight: 800;
-    color: #969696;
+    color: #6C60A0;
     font-size: 22px;
 }
 
@@ -729,7 +738,7 @@ p.time {
 
 .text_tables .left ol li strong {
     font-weight: 800;
-    color: #969696;
+    color: #6C60A0;
     font-size: 22px;
 }
 
@@ -740,7 +749,17 @@ p.time {
 
 
 
+.similar h3 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
+.similar h4 {
+    color: white;
+    font-size: 22px;
+    margin: 4px 0;
+}
 
 .similar .more_news {
     display: flex;
@@ -780,29 +799,21 @@ p.time {
     padding: 17px 0;
 }
 
+.share-block .fab {
+    color: white;
+    font-size: 24px;
+}
+
+.share-block .fa {
+    margin-right: 8px;
+}
+
 .share-btn {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-size: cover;
 }
 
-.facebook-btn {
-    background-image: url('URL_TO_FACEBOOK_ICON');
-}
-
-.twitter-btn {
-    background-image: url('URL_TO_TWITTER_ICON');
-}
-
-.vk-btn {
-    background-image: url('URL_TO_VK_ICON');
-}
-
-.telegram-btn {
-    background-image: url('URL_TO_TELEGRAM_ICON');
-}
-/* /////// END /* NEWS  */ 
 
 
 
@@ -818,17 +829,49 @@ p.time {
 
 
 
+/* // АНИМАЦИЯ ГЛАВНОГО ЭКРАНА  */
 
 
+.container {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+  svg {
+    position: absolute;
+    height: 100%;
+  }
+  
+  .lines {
+    opacity: 0.05;
+  }
+  
+  .line {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #4C3A90;
+  }
+  
+  .lights {
+    opacity: 0.9;
+  }
+  
+  .light {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #7A6BB5;
+  }
 
 
-
-
-
-
-
-
-
+/* // END АНИМАЦИЯ ГЛАВНОГО ЭКРАНА  */
 
 
 
