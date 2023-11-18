@@ -75,6 +75,148 @@ window.addEventListener('scroll', function() {
 
 
 
+// slice blog item text 
+
+function truncateText(text) {
+    if (text.length > 140) {
+        return text.substring(0, 140) + "...";
+    } else {
+        return text;
+    }
+}
+
+let blogTexts = document.querySelectorAll('section.news .news-item p.descr');
+
+if (blogTexts) {
+    blogTexts.forEach((el) => {
+        let slicedText = truncateText(el.textContent);
+        el.innerText = slicedText;
+    });
+}
+
+
+// end slice blog item text 
+
+
+
+
+
+// READING TIME 
+
+function readingTime() {
+    // Получаем все элементы <p> на странице
+    var textElements = document.getElementsByTagName('p');
+
+    // Инициализируем счетчик слов
+    var wordCount = 0;
+
+    // Проходим по каждому элементу <p>
+    for (var i = 0; i < textElements.length; i++) {
+        // Получаем текст элемента
+        var text = textElements[i].innerText;
+
+        // Разбиваем текст на слова
+        var words = text.split(' ');
+
+        // Добавляем количество слов в счетчик
+        wordCount += words.length;
+    }
+
+    // Вычисляем время чтения (200 слов в минуту)
+    var readingTime = Math.ceil(wordCount / 150);
+
+    // Возвращаем время чтения
+    return readingTime;
+}
+
+
+
+
+let reading = document.querySelector('.watch_time strong');
+if (reading) {
+    reading.innerText = readingTime();
+}
+
+// END READING TIME 
+
+
+
+// ПРОСТАВЛЕНИЕ ЦИФР В СОДЕРЖАНИЕ 
+// var listItems = document.querySelectorAll('#table-of-contents ul li');
+
+// if (listItems) {
+
+//     function numbersList() {
+//         for (var i = 0; i < listItems.length; i++) {
+//             var listItem = listItems[i];
+//             var numberCircle = document.createElement('span');
+//             numberCircle.style.border = '1px solid white';
+//             numberCircle.style.background = 'white';
+//             numberCircle.style.borderRadius = '50%';
+//             numberCircle.style.width = '16px';
+//             numberCircle.style.height = '16px';
+//             numberCircle.style.display = 'inline-block';
+//             numberCircle.style.textAlign = 'center';
+//             numberCircle.style.marginRight = '10px';
+//             numberCircle.style.color = 'black';
+//             numberCircle.style.fontWeight = '800';
+//             numberCircle.style.fontSize = '13px';
+//             numberCircle.innerText = i + 1;
+//             listItem.insertBefore(numberCircle, listItem.firstChild);
+//         }
+//     }
+//     numbersList();
+// }
+
+
+// END ПРОСТАВЛЕНИЕ ЦИФР В СОДЕРЖАНИЕ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // STARS 
 // Wobble by @neave
 
