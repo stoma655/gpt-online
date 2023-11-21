@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><%= article.title %></title>
+        <meta name="description" content="<%= article.description %>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="canonical" href="<%= article.canonicalUrl %>">
+        <meta name="robots" content="index,follow">
+    
+        <!-- Open Graph Tags -->
+        <meta property="og:title" content="<%= article.ogTitle %>">
+        <meta property="og:description" content="<%= article.ogDescription %>">
+        <meta property="og:image" content="<%= article.ogImage %>">
+        <meta property="og:url" content="<%= article.ogUrl %>">
+    
+        <!-- Twitter Card Tags -->
+        <meta name="twitter:title" content="<%= article.twitterTitle %>">
+        <meta name="twitter:description" content="<%= article.twitterDescription %>">
+        <meta name="twitter:image" content="<%= article.twitterImage %>">
+        <meta name="twitter:card" content="summary_large_image">
+    
+        <!-- Schema Markup -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "<%= article.schema.url %>"
+            },
+            "headline": "<%= article.schema.headline %>",
+            "image": "<%= article.schema.image %>",
+            "author": {
+                "@type": "Organization",
+                "name": "ChatGPT"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "ChatGPT",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "<%= article.schema.logo %>"
+                }
+            },
+            "datePublished": "<%= article.schema.datePublished %>",
+            "dateModified": "<%= article.schema.dateModified %>"
+        }
+        </script>
+    
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+<body>
+
+    <!-- <div class="social-share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=URL" target="_blank" class="share-btn facebook-btn">Facebook</a>
+        <a href="https://twitter.com/intent/tweet?url=URL&text=TEXT" target="_blank" class="share-btn twitter-btn">Twitter</a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=URL&title=TITLE&summary=SUMMARY&source=SOURCE" target="_blank" class="share-btn linkedin-btn">LinkedIn</a>
+        <a href="http://vk.com/share.php?url=URL" target="_blank" class="share-btn vk-btn">VK</a>
+        <a href="https://connect.ok.ru/offer?url=URL&title=TITLE&description=SUMMARY&imageUrl=IMAGEURL" target="_blank" class="share-btn ok-btn">Одноклассники</a>
+    </div>
+ -->
+
+
+
+
+
+
+    <button id="back-to-top" title="Back to top">↑</button>
+
+    <%- include('includes/header', {isHomepage: false}); %>
+
+    <section class="news">
+        <div class="wrapper">
+
+
+            <nav aria-label="breadcrumb" class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+
+                  <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/">
+                      <span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1" />
+                  </li>
+
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+                  <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/blog">
+                      <span itemprop="name">Новости о ChatGPT</span></a>
+                    <meta itemprop="position" content="2" />
+                  </li>
+
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+                  <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+
+                    <span itemprop="name"><%= article.title %></span>
+                    <meta itemprop="position" content="3" />
+                  </li>
+
+                </ol>
+              </nav>
+<!-- 
+            <div class="bread">
+                <a href="/">Главная</a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+                <a href="/blog">Новости о ChatGPT</a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <span>Название статьи</span>
+            </div> -->
+
+            <h1><%= article.content.heading %></h1>
+            
+            
+            <p class="time"><i class="fas fa-clock"></i> ОПУБЛИКОВАНО <time datetime="<%= article.content.publishedDate %>"><%= article.content.publishedDate %></time></p>
+            
+            <img class="mainImage" src="<%= article.imageURL %>" alt="<%= article.title %>">
+            
+            <% article.content.intro.forEach(function(intro) { %>
+                <p class="title-descr"><%= intro %></p>
+            <% }); %>
+
+
+            <div class="text_tables">
+
+                <div class="left">
+
+                    <div id="table-of-contents">
+                        <h2><i class="fas fa-book-open"></i> Содержание:</h2>
+                        <ul>
+                            <% article.content.sections.forEach(function(section) { %>
+                                <li><a href="#<%= section.id %>"><%= section.title %></a></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                    
+                    <% article.content.sections.forEach(function(section) { %>
+                        <h2 id="<%= section.id %>"><%= section.title %></h2>
+                        <% section.content.forEach(function(content) { %>
+                            <% if (content.type === 'paragraph') { %>
+                                <p><%- content.text %></p>
+                            <% } else if (content.type === 'link') { %>
+                                <p><a href="<%= content.url %>"><%= content.text %></a></p>
+                            <% } else if (content.type === 'call') { %>
+                                <div class="call">
+                                    <p>Все самые новые модели искусственного интеллекта и чат GPT, вы можете опробовать на нашем сайте полностью бесплатно:</p>
+                                    <a href="/">Попробовать чат GPT сейчас</a>
+                                </div>
+                            <% } else if (content.type === 'image') { %>
+                                <p><img src="<%= content.fileName %>" alt="<%= content.alt %>"></p>
+                            <% } else if (content.type === 'ul') { %>
+                                <ul>
+                                    <% content.items.forEach(function(item) { %>
+                                        <li><%- item %></li>
+                                    <% }); %>
+                                </ul>
+                            <% } else if (content.type === 'ol') { %>
+                                <ol>
+                                    <% content.items.forEach(function(item) { %>
+                                        <li><%- item %></li>
+                                    <% }); %>
+                                </ol>
+                            <% } %>
+                        <% }); %>
+                    <% }); %>
+                
+
+
+
+                    <div class="share-block">
+                        <p><i class="fa fa-share" aria-hidden="true"></i> 
+                              Поделиться этой статьёй</p>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= article.ogUrl %>" target="_blank" class="share-btn facebook-btn">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url=<%= article.ogUrl %>&text=<%= article.ogTitle %>" target="_blank" class="share-btn twitter-btn">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="http://vk.com/share.php?url=<%= article.ogUrl %>" target="_blank" class="share-btn vk-btn">
+                                <i class="fab fa-vk" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://telegram.me/share/url?url=<%= article.ogUrl %>&text=<%= article.ogTitle %>" target="_blank" class="share-btn telegram-btn">
+                                <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://connect.ok.ru/offer?url=<%= article.ogUrl %>&title=<%= article.ogTitle %>&imageUrl=<%= article.ogImage %>&description=<%= article.ogDescription %>" target="_blank" class="share-btn ok-btn">
+                                <i class="fab fa-odnoklassniki" aria-hidden="true"></i>
+                            </a>
+                    </div>
+
+                    <div class="similar">
+                        <h3>Еще интересное на сайте:</h3>
+    
+                        <div class="more_news">
+    
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="https://source.unsplash.com/random/200x200?sig=5" alt="News Image 1">
+                                    </div>
+                                    <h4>Название новости 1</h4>
+                                    <p>
+                                        <i class="fas fa-clock"></i>
+                                        2023-11-13</p>
+                                </a>
+                            </div>
+    
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="https://source.unsplash.com/random/200x200?sig=5" alt="News Image 1">
+                                    </div>
+                                    <h4>Название новости 1</h4>
+                                    <p>
+                                        <i class="fas fa-clock"></i>
+                                        2023-11-13</p>
+                                </a>
+                            </div>
+    
+                            <div class="news-item">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="https://source.unsplash.com/random/200x200?sig=5" alt="News Image 1">
+                                    </div>
+                                    <h4>Название новости 1</h4>
+                                    <p>
+                                        <i class="fas fa-clock"></i>
+                                        2023-11-13</p>
+                                </a>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="right">
+                    <div class="watch_time">
+                        <i class="fas fa-stopwatch"></i>
+                        <span><strong>50</strong> МИН. ЧТЕНИЕ</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrapper">
+            <span>ChatGPT Online</span>
+        </div>
+    </footer>
+
+    <script src="/index.js"></script>
+</body>
+</html>

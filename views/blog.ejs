@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Блог Chat GPT: последние новости и обновления</title>
+    <meta name="description" content="Последние новости и обновления от Chat GPT, вашего персонального AI-ассистента.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="URL страницы блога">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Блог Chat GPT: последние новости и обновления">
+    <meta property="og:description" content="Последние новости и обновления от Chat GPT, вашего персонального AI-ассистента.">
+    <meta property="og:image" content="URL изображения">
+    <meta property="og:url" content="URL страницы блога">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:title" content="Блог Chat GPT: последние новости и обновления">
+    <meta name="twitter:description" content="Последние новости и обновления от Chat GPT, вашего персонального AI-ассистента.">
+    <meta name="twitter:image" content="URL изображения">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "url": "URL страницы блога",
+        "name": "Блог Chat GPT: последние новости и обновления"
+    }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <button id="back-to-top" title="Back to top">↑</button>
+
+    <%- include('includes/header', {isHomepage: false}); %>
+
+    <section class="news">
+        <div class="wrapper">
+
+
+            <nav aria-label="breadcrumb" class="breadcrumb">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+
+                  <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="/">
+                      <span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1" />
+                  </li>
+
+
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+                  <li itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+
+                    <span itemprop="name">Новости о ChatGPT</span>
+                    <meta itemprop="position" content="3" />
+                  </li>
+
+                </ol>
+              </nav>
+
+            <h1>Последние новости о chat GPT</h1>
+            <p class="title-descr">Chat GPT - это передовая модель искусственного интеллекта, о которой мы регулярно пишем в нашем блоге. Эта модель, разработанная командой OpenAI, способна создавать текст на естественном языке, что делает ее незаменимым инструментом в мире технологий.</p>
+
+                <p class="title-descr">В нашем блоге вы найдете множество статей, посвященных работе Chat GPT. Мы подробно рассказываем о том, как эта модель обучается на огромном объеме текстовых данных и как она может генерировать качественные ответы на самые разнообразные вопросы.</p>
+                
+                <p class="title-descr">Благодаря своей гибкости и адаптивности, Chat GPT находит применение в самых разнообразных областях, от образования до медицины, от финансов до искусства, от науки до развлечений. В нашем блоге мы регулярно публикуем обновления и новости о последних достижениях и применениях Chat GPT.</p>
+
+
+            <div class="blog_items">
+                <% articles.forEach(function(article) { %>
+                    <div class="news-item">
+                        <a href="/blog/<%= article.slug %>">
+                            <div class="info">
+                                <h2><%= article.title %></h2>
+                                <p class="descr"><%= article.content.intro %></p>
+                                <p>
+                                    <i class="fas fa-clock"></i>
+                                    <%= article.content.publishedDate %></p>
+                            </div>
+                            <div class="image-container">
+                                <img src="<%= article.imageURL %>" alt="<%= article.title %>">
+                            </div>
+                        </a>
+                    </div>
+                <% }); %>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- <footer>
+        <div class="wrapper">
+            <span>ChatGPT Online</span>
+        </div>
+    </footer> -->
+
+
+    <script src="index.js"></script>
+</body>
+</html>
