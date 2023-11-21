@@ -91,6 +91,7 @@ header .wrapper .logo span {
 section.accord {
     width: 100%;
     padding-top: 60px;
+    padding-bottom: 90px;
 }
 
 section.accord h4 {
@@ -174,7 +175,7 @@ section.news-section .wrapper {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 1em;
 }
 
@@ -190,6 +191,9 @@ section.news-section .wrapper {
 .news-item {
     flex: 0 0 calc(33.3333% - 1em);
     margin: 0.5em;
+    border: 1px solid rgb(48, 48, 48);
+    border-radius: 10px;
+    padding: 20px;
     /* box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2); */
     transition: all 0.3s ease-in-out;
     color: #333;
@@ -460,7 +464,7 @@ section.welcome .wrapper h1 {
 section.welcome .wrapper p {
     color: white;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 28px;
 }
 
 section.welcome canvas {
@@ -587,7 +591,7 @@ section.news p.title-descr {
     margin-top: 70px;
     display: flex;
     flex-wrap: wrap;
-    
+    padding-bottom: 100px;
 }
 
 .blog_items .news-item {
@@ -933,12 +937,15 @@ footer {
 footer .wrapper {
     max-width: 1200px;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 100%;
     display: flex;
     align-items: center;
 }
 
+footer .wrapper a {
+    text-decoration: none;
+}
 
 footer .wrapper span {
     color: rgb(231, 231, 231);
@@ -946,4 +953,116 @@ footer .wrapper span {
     line-height: 15px;
     font-weight: 700;
     letter-spacing: 4px;
+}
+
+footer nav {
+    margin-left: 120px;
+    transition: .2s
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+footer nav ul li {
+    margin-right: 66px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стили для экранов шириной от 1200px до 992px */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Ваши стили здесь */
+    header {
+        padding: 0 40px;
+    }
+
+    section.welcome .wrapper {
+        padding: 0 40px;
+    }
+
+    section.why-me h2 {
+        font-size: 34px;
+    }
+
+    section.why-me .column p {
+        font-size: 30px;
+    }
+    section.why-me .wrapper {
+        padding-top: 0;
+    }
+
+    section.features .wrapper {
+        flex-wrap: wrap;
+    }
+    section.features .block {
+        padding: 20px 10px;
+    }
+    section.features {
+        padding: 85px 0;;
+    }
+    section.text .wrapper p {
+        font-size: 18px;
+    }
+    section.text .wrapper ul li {
+        font-size: 18px;
+    }
+    .news-section h2 {
+        font-size: 34px;
+    }
+    section.news-section {
+        padding-top: 20px;
+    }
+    
+}
+
+/* Стили для экранов шириной от 768px до 992px */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    /* Ваши стили здесь */
+}
+
+/* Стили для экранов шириной от 481px до 768px */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Ваши стили здесь */
+}
+
+/* Стили для экранов шириной от 380px до 480px */
+@media only screen and (min-width: 381px) and (max-width: 480px) {
+    /* Ваши стили здесь */
+}
+
+/* Стили для экранов шириной до 380px */
+@media only screen and (max-width: 380px) {
+    /* Ваши стили здесь */
 }

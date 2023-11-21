@@ -1,0 +1,32 @@
+<footer>
+    <div class="wrapper">
+
+        <% if (isHomepage) { %>
+            <span>ChatGPT Online</span>
+        <% } else { %>
+            <a href="/"><span>ChatGPT Online</span></a>
+        <% } %>
+        
+
+        <nav>
+            <ul>
+       
+                <% if (!isHomepage) { %>
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                <% } %>
+          
+                <li>
+                    <a href="/blog">Новости о ChatGPT</a>
+                </li>
+                <!-- <li>
+                    <a href="/blog">GPT4 Бесплатно</a>
+                </li>
+                <li>
+                    <a href="/blog">Генератор картинок</a>
+                </li> -->
+            </ul>
+        </nav>
+    </div>
+</footer>
