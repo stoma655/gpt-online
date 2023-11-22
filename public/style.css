@@ -997,12 +997,12 @@ footer nav ul li a:hover {
 
 
 
-
+/* // INDEX PAGE MOBILE  */
 
 
 
 /* Стили для экранов шириной от 1200px до 992px */
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     /* Ваши стили здесь */
     header {
         padding: 0 40px;
@@ -1044,25 +1044,414 @@ footer nav ul li a:hover {
     section.news-section {
         padding-top: 20px;
     }
+
+    footer {
+        padding: 0 40px;
+    }
     
 }
 
 /* Стили для экранов шириной от 768px до 992px */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
     /* Ваши стили здесь */
+    header .wrapper .logo span {
+        font-size: 18px;
+    }
+    section.welcome .wrapper h1 {
+        font-size: 44px;
+    }
+    section.welcome .wrapper p {
+        font-size: 18px;
+    }
+    .btn a {
+        font-size: 20px;
+        padding: 0.8em 2em;
+    }
+    section.why-me h2 {
+        font-size: 28px;
+    }
+    section.why-me .column {
+        padding-top: 0;
+    }
+    section.why-me .arrow {
+        font-size: 18px;
+    }
+    section.why-me .column p {
+        font-size: 24px;
+    }
+    section.why-me .column ul li {
+        font-size: 14px;
+    }
+    section.features .block {
+        min-width: 200px;
+    }
+    section.text .wrapper p {
+        font-size: 17px;
+    }
+    section.text {
+        padding-top: 45px;
+    }
+    section.text .wrapper ul li {
+        font-size: 17px;
+    }
+    section.text .wrapper p {
+        margin-bottom: 24px;
+    }
+    .news-section h2 {
+        font-size: 28px;
+    }
+    section.news-section .wrapper .news-item {
+        min-width: 260px;
+    }
+    section.news-section .wrapper .news-item h3 {
+        font-size: 1em;
+    }
+    section.accord h4 {
+        font-size: 28px;
+    }
+    .accordion-title {
+        font-size: 20px;
+    }
+    .accordion-content p {
+        font-size: 17px;
+    }
+
+    footer .wrapper span {
+        font-size: 20px;
+    }
+    
 }
 
 /* Стили для экранов шириной от 481px до 768px */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     /* Ваши стили здесь */
+    header .wrapper .logo span {
+        font-size: 15px;
+    }
+    header nav ul li {
+        margin-right: 12px;
+    }
+    header nav {
+        margin-left: 23px;
+    }
+    header nav ul li {
+        font-size: 14px;
+    }
+    section.welcome .wrapper h1 {
+        font-size: 32px;
+        margin-top: 60px;
+        line-height: 35px;
+    }
+    section.welcome .wrapper p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .btn a {
+        font-size: 18px;
+        padding: 0.8em 1em;
+    }
+
+    section.welcome {
+        height: 680px;
+    }
+    section.why-me .wrapper {
+        flex-direction: column;
+    }
+    section.why-me .arrow {
+        transform: rotate(90deg);
+    }
+    section.why-me h2 {
+        font-size: 22px;
+    }
+    section.why-me {
+        padding-top: 50px;
+    }
+    section.why-me .column p {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    section.text .wrapper p {
+        font-size: 16px;
+    }
+    section.text .wrapper ul li {
+        font-size: 16px;
+    }
+    .news-section h2 {
+        font-size: 24px;
+        margin-top: 0px;
+    }
+    section.news-section .wrapper .news-item {
+        padding: 10px;
+    }
+    section.news-section .wrapper {
+        flex-direction: column;
+    }
+    section.accord h4 {
+        font-size: 22px;
+        margin-top: 0;
+    }
+    .accordion-title {
+        font-size: 17px;
+    }
+    .accordion-content p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    footer nav ul li {
+        margin-right: 12px;
+    }
+    footer nav {
+        margin-left: 23px;
+    }
+    footer nav ul li {
+        font-size: 14px;
+    }
+    
 }
 
 /* Стили для экранов шириной от 380px до 480px */
-@media only screen and (min-width: 381px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     /* Ваши стили здесь */
+    section.welcome .wrapper h1 {
+        font-size: 24px;
+    }
+
+    section.welcome .wrapper p {
+        font-size: 14px;
+    }
+    .btn a {
+        font-size: 16px;
+    }
+    section.why-me h2 {
+        font-size: 18px;
+    }
+    .accordion-title {
+        font-size: 15px;
+    }
+
+    .accordion-content p {
+        font-size: 15px;
+    }
+
+    footer .wrapper span {
+        font-size: 15px;
+    }
 }
 
-/* Стили для экранов шириной до 380px */
+/* Стили для экранов шириной до 380px
 @media only screen and (max-width: 380px) {
     /* Ваши стили здесь */
+/* }  */
+
+
+
+/* END INDEX PAGE MOBILE  */
+
+
+
+
+
+
+
+
+/*BLOG PAGE MOBILE  */
+
+/* Стили для экранов шириной от 1200px до 992px */
+@media only screen and (max-width: 1200px) {
+    section.news .wrapper {
+        padding: 0 40px;
+    }
+    
+    .blog_items .news-item {
+        min-width: 100%;
+    }
+    .blog_items .news-item h2 {
+        font-size: 20px;
+    }
 }
+
+/* Стили для экранов шириной от 768px до 992px */
+@media only screen and (max-width: 992px) {
+    section.news p.title-descr {
+        font-size: 17px;
+    }
+    section.news h1 {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    
+}
+
+/* Стили для экранов шириной от 481px до 768px */
+@media only screen and (max-width: 768px) {
+    .blog_items .news-item a {
+        flex-direction: column;
+    }
+    .blog_items .news-item {
+        padding: 10px;
+    }
+    footer nav {
+        margin-left: 0;
+    }
+    
+}
+
+/* Стили для экранов шириной от 380px до 480px */
+@media only screen and (max-width: 480px) {
+    /* Ваши стили здесь */
+    section.news .wrapper {
+        padding: 0 20px;
+    }
+
+    section.news h1 {
+        font-size: 24px;
+    }
+
+    section.news p.title-descr {
+        font-size: 16px;
+    }
+
+    .blog_items .news-item h2 {
+        font-size: 18px;
+    }
+}
+
+/* Стили для экранов шириной до 380px
+@media only screen and (max-width: 380px) {
+    /* Ваши стили здесь */
+/* }  */
+
+/* END BLOG PAGE MOBILE  */
+
+
+
+
+
+
+
+
+
+
+
+
+/* SINGLE NEWS PAGE MOBILE  */
+
+/* Стили для экранов шириной от 1200px до 992px */
+@media only screen and (max-width: 1200px) {
+    /* .text_tables .right {
+        display: none;
+    } */
+    section.news .mainImage {
+        max-width: 100%;
+    }
+    .text_tables {
+        flex-direction: column;
+    }
+    .text_tables .left {
+        max-width: 100%;
+    }
+    .watch_time {
+        margin-bottom: 30px;
+    }
+}
+
+/* Стили для экранов шириной от 768px до 992px */
+@media only screen and (max-width: 992px) {
+    .breadcrumb li {
+        font-size: 14px;
+    }
+    section.news h1 {
+        font-size: 24px;
+    }
+    p.time {
+        font-size: 14px;
+    }
+    section.news .mainImage {
+        margin-bottom: 0px;
+    }
+    section.news p.title-descr {
+        font-size: 16px;
+    }
+    #table-of-contents h2 {
+        font-size: 21px;
+    }
+
+    .text_tables .left ul li {
+        font-size: 18px;
+    }
+
+    .text_tables .left h2 {
+        font-size: 33px;
+        margin-top: 0;
+    }
+
+    .text_tables .left p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .text_tables .left ul li strong {
+        font-size: 18px;
+    }
+
+    .text_tables .left p strong {
+        font-size: 18px;
+    }
+
+    .text_tables .left p img {
+        max-width: 100%;
+    }
+    
+}
+
+/* Стили для экранов шириной от 481px до 768px */
+@media only screen and (max-width: 768px) {
+    .breadcrumb ol {
+        flex-direction: column;
+    }
+    .breadcrumb .fa {
+        transform: rotate(-90deg);
+        display: inline;
+        width: 10px;
+        margin-top: 4px;
+        margin-bottom: 6px;
+        margin-left: 17px;
+    }
+
+    section.news h1 {
+        font-size: 22px;
+    }
+
+    p.time {
+        font-size: 13px;
+    }
+
+    section.news .mainImage {
+        margin-top: 15px
+    }
+
+    #table-of-contents ul li {
+        font-size: 16px;
+        padding-top: 0;
+    }
+
+    #table-of-contents h2 {
+        font-size: 19px;
+    }
+    #table-of-contents {
+        margin-bottom: 40px;
+    }
+    
+}
+
+/* Стили для экранов шириной от 380px до 480px */
+@media only screen and (max-width: 480px) {
+   
+}
+
+/* Стили для экранов шириной до 380px
+@media only screen and (max-width: 380px) {
+    /* Ваши стили здесь */
+/* }  */
+
+/* END SINGLE NEWS PAGE MOBILE  */
