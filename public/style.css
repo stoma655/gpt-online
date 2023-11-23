@@ -1441,12 +1441,50 @@ footer nav ul li a:hover {
     #table-of-contents {
         margin-bottom: 40px;
     }
+
+    .text_tables .left h2 {
+        font-size: 24px;
+    }
+
+    .text_tables .left p {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .call {
+        padding: 10px 20px;
+    }
+
+    .text_tables .left ul li {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .share-block  {
+        position: relative;
+    }
+
+    .share-block p {
+        position: absolute;
+        top: -50px
+    }
+    
     
 }
 
 /* Стили для экранов шириной от 380px до 480px */
 @media only screen and (max-width: 480px) {
-   
+    section.news h1 {
+        font-size: 20px;
+    }
+    .watch_time {
+        font-size: 16px;
+    }
+
+   .text_tables .right {
+    width: auto;
+   }
 }
 
 /* Стили для экранов шириной до 380px
