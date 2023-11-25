@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://gptchat-online.ru/sitemap.xml
