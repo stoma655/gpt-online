@@ -63,7 +63,7 @@ header nav ul li a:hover {
 
 section {
     width: 100%;
-    background-color: #202123;
+    background-color: #141414;
 }
 
 /* section .wrapper {
@@ -114,7 +114,7 @@ section.accord .wrapper {
 }
 
 .accordion-item {
-    background: #353535;
+    background: #1e1e1e;
     color: #ffffff;
     margin: 1em 0;
     border-radius: 0.5em;
@@ -383,7 +383,7 @@ section.why-me .column {
     margin: 0.5em;
     padding: 2em;
     text-align: center;
-    background-color: #202123;
+    /* background-color: #1e1e1e; */
     color: white;
     border-radius: 10px;
     /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
