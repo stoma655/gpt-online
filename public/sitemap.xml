@@ -3,22 +3,27 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://gptchat-online.ru/</loc>
-	<lastmod>2023-11-25T20:08:43+01:00</lastmod>
+	<lastmod>2023-11-29T17:09:04+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog</loc>
-	<lastmod>2023-11-25T20:08:43+01:00</lastmod>
+	<lastmod>2023-11-29T17:09:04+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog/chto-takoe-chat-gpt</loc>
-	<lastmod>2023-11-25T20:08:43+01:00</lastmod>
+	<lastmod>2023-11-29T17:09:04+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog/chat-gpt-dlya-marketinga</loc>
-	<lastmod>2023-11-25T20:08:43+01:00</lastmod>
+	<lastmod>2023-11-29T17:09:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://gptchat-online.ru/blog/chat-bot-grok</loc>
+	<lastmod>2023-11-29T17:09:04+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>

@@ -583,8 +583,8 @@ section.news h1 {
 }
 
 section.news p.title-descr {
-    font-size: 18px;
-    color: rgb(168, 168, 168);
+    font-size: 22px;
+    color: rgb(241, 241, 241);
 }
 
 .blog_items {
@@ -707,7 +707,7 @@ p.time {
 }
 
 .text_tables .left p {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 100;
     color: white;
     margin-bottom: 36px;
@@ -1493,3 +1493,71 @@ footer nav ul li a:hover {
 /* }  */
 
 /* END SINGLE NEWS PAGE MOBILE  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+body, section, .accordion-item, .news-item, .column, .call, footer {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.575);
+}
+
+.accordion-title, .accordion-content, .breadcrumb span, .breadcrumb .fa, .share-block p {
+    color: #000000;
+}
+
+#back-to-top, .btn a {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#table-of-contents, .call {
+    border-color: #000000;
+}
+
+.news-section .news-item, .text_tables .left, .text_tables .right {
+    border-color: #000000;
+}
+
+.share-block {
+    border-top-color: #000000;
+    border-bottom-color: #000000;
+} */
