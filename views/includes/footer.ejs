@@ -2,9 +2,11 @@
     <div class="wrapper">
 
         <% if (isHomepage) { %>
-            <span>ChatGPT Online</span>
-        <% } else { %>
-            <a href="/"><span>ChatGPT Online</span></a>
+            <span>ChatGPT <br> Online</span>
+        <% } %>
+
+        <% if (!isHomepage || isImageGenerator) { %>
+            <a href="/"><span>ChatGPT <br> Online</span></a>
         <% } %>
         
 
@@ -20,6 +22,11 @@
                 <li>
                     <a href="/blog">Новости о ChatGPT</a>
                 </li>
+                <% if (!isImageGenerator) { %>
+                    <li>
+                        <a href="/image-generator">Генератор картинок</a>
+                    </li>
+                <% } %>
                 <!-- <li>
                     <a href="/blog">GPT4 Бесплатно</a>
                 </li>

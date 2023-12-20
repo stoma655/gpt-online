@@ -3,7 +3,9 @@
         <div class="logo">
             <% if (isHomepage) { %>
                 <span>ChatGPT <br> Online</span>
-            <% } else { %>
+            <% } %>
+
+            <% if (!isHomepage || isImageGenerator) { %>
                 <a href="/"><span>ChatGPT <br> Online</span></a>
             <% } %>
         </div>
@@ -17,6 +19,12 @@
                 <li>
                     <a href="/blog">Новости о ChatGPT</a>
                 </li>
+
+                <% if (!isImageGenerator) { %>
+                    <li>
+                        <a href="/image-generator">Генератор картинок</a>
+                    </li>
+                <% } %>
                 <!-- <li>
                     <a href="/blog">GPT4 Бесплатно</a>
                 </li>

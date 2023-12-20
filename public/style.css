@@ -337,6 +337,15 @@ section.text .wrapper {
     /* border: 1px solid blue; */
 }
 
+section.text .wrapper h2 {
+    color: white;
+}
+
+section.text .wrapper h3 {
+    margin-top: 40px;
+    color: white;
+}
+
 section.text .wrapper p {
     font-size: 19px;
     color: white;

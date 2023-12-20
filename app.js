@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
   res.render('index', { articles: articles });
 });
 
+app.get('/image-generator', (req, res) => {
+  res.render('image', { articles: articles });
+});
+
 app.get('/blog', (req, res) => {
   // Отправить все статьи в шаблон EJS
   res.render('blog', { articles: articles });

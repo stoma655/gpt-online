@@ -3,37 +3,52 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://gptchat-online.ru/</loc>
-	<lastmod>2023-12-05T17:39:44+01:00</lastmod>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog</loc>
-	<lastmod>2023-12-05T17:39:44+01:00</lastmod>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog/chto-takoe-chat-gpt</loc>
-	<lastmod>2023-12-05T17:39:44+01:00</lastmod>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog/chat-gpt-dlya-marketinga</loc>
-	<lastmod>2023-12-05T17:39:44+01:00</lastmod>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog/chat-bot-grok</loc>
-	<lastmod>2023-12-05T17:39:44+01:00</lastmod>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog/chat-gpt-dlya-cyberatack</loc>
-	<lastmod>2023-12-05T17:39:44+01:00</lastmod>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://gptchat-online.ru/blog/google-o-ai-chat-botah</loc>
-	<lastmod>2023-12-05T17:39:44+01:00</lastmod>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://gptchat-online.ru/blog/kakie-plani-y-openai</loc>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://gptchat-online.ru/blog/ai-bot-gemini</loc>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://gptchat-online.ru/blog/kak-zarabotat-na-chat-gpt</loc>
+	<lastmod>2023-12-09T22:38:51+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
